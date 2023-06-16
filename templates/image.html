@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <title>Upload image</title>
+       <style>
+        label{
+    font-weight: 750;
+    margin-bottom: 10px;
+    display: inline-block;
+    text-align: center;
+}
+input{
+    margin-top: 10px;
+    size: 10px;
+    padding: 7px;
+    width: 15vw;
+}
+body{
+    background-image: url("static/images/2.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: right;
+
+    font-family: sans-serif;
+    
+}
+h1{
+    /* text-decoration: underline; */
+    color: white;
+    text-align: center;
+}
+button{
+    height: 80px;
+    width: 150px;
+    font-size: 20px;
+    background-color: rgb(96, 96, 190);
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 45vw;
+    margin-right: 45vw;
+    /* display: flex;
+    flex-flow: row nowrap;
+    justify-content: center; */
+    align-items: center;
+    padding: 10px;
+    transition: all 0.2s ease-out;
+}
+button:hover{
+    transform: scale(1.1);
+}
+input{
+    opacity: 1;
+    z-index: 2;
+}
+
+/* class */
+.segments{
+    border: 3px solid black;
+    margin: 30px;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 17px;
+    transition: all 0.2s ease-out;
+    opacity: 0.8;
+}
+.segments:hover{
+    transform: scale(1.01);
+    opacity: 1;
+}
+       </style>
+    </head>
+    <body>
+        <!-- heading -->
+        <div class="segments">
+            <h1 id="main-heading">
+                Upload Image
+            </h1>
+        </div>
+
+
+        <form action="{{url_for('predict')}}" method="POST" enctype="multipart/form-data">    
+            <div class="segments">
+                <label for="file">Upload File</label> <br>
+                <input type="file" name="file" id="file" accept="image/png, image/jpeg, image/jpg" required>
+            </div>
+
+            <button type="submit" value="predict">UPLOAD</button>
+        </form>  -->
+       
+    </body>
+</html>

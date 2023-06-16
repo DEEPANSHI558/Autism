@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px 0px;
+            padding:0px 0px;
+        }
+        .background{
+            position: relative;
+        }
+          .background img{
+              width:100%;
+              height:100%;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-attachment:fixed;
+              opacity:0.3;
+          }
+          .data{
+              position:absolute;    
+              top: 20%;
+              left: 50%;
+              text-align:center;
+              transform: translate(-50%, -50%);
+              /* border:2px solid black; */
+
+            }
+            .n{
+                font-family: 'Montserrat', sans-serif;
+            }
+            .btn{
+                border-radius: 30px;
+                font-size:17px;
+                text-decoration:none;
+                font-weight:700;
+                border:none;
+                outline:none;
+                padding:20px 40px;
+                color:white;
+               }
+            .btn-smart{
+                 background-color: rgb(255, 69, 79);
+             }
+             .home_btn{
+                 text-align:center;
+             }
+             .i{
+                width:100%;
+                height:300px;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                /* border:2px solid black; */
+             }
+             .i img{
+                width:300px;
+                height:100%;
+                opacity:1;
+             }
+          
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="image">
+            <img src="/static/images/alireza-attari-SBIak0pKUIE-unsplash.jpg" alt="">
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="data">
+            {%if data==1%}
+            <h1 class="n">No you dont have autism.Stay happy and healthy</h1>
+            {%else%}
+            <h1 class="n">You or your child have autism please take care of him or her and be patient everthing will be fine</h1>
+            {%endif%}
+            <br><br>
+            <div class="i">
+                <img src="{{url_for('static',filename='images/'+image_file.filename)}}" alt="Uploaded Image">    
+            </div>
+            <h1 class="n">Thank you for taking the test!!!</h1>
+            <br><br>
+            <div class="home_btn">
+            <a href="/" class="btn btn-smart">Go back to home page</a>
+        </div>
+        <br>
+        <br>
+        
+        </div>
+       
+    </div>
+
+   
+</body>
+</html>

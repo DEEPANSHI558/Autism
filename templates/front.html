@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    
+  }
+  body{
+    font-family: 'Montserrat', sans-serif;
+  }
+  /*banner */
+  .banner{
+    width:100%;
+    height:100vh;
+    background:url("static/images/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+    position:relative;
+
+   
+  }
+  .banner_content{
+     display:flex;
+     align-items: center;
+     height:100vh;
+  
+  }
+  .container{
+     width:1200px;
+     max-width:1200px;
+     margin:0 auto;
+     color:white;
+     /* border:2px solid yellow; */
+  }
+  
+  .banner_text{
+    width:500px;
+  }
+  .banner_text h3{
+    font-size:55px;
+  }
+  .banner_text h1{
+    margin-top: 20px;;
+    font-size:80px;
+    line-height: 80px;
+    font-weight: 1000;
+  }
+  .banner_text p{
+    margin-top: 20px;
+    font-size:25px;
+    font-weight:600;
+   
+  }
+  /* navigation bar */
+  .navbar{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    /* border:2px solid yellow; */
+  }
+  .navbar_text{
+    display:flex;
+    height: 60px;
+    align-items: center;
+    width:1200px;
+    margin:0 auto;
+  }
+  .logo img{
+   width:220px;
+  }
+  .logo{
+    width:20%;
+    color:white;
+  }
+  .navbar_ul{
+    width:80%;
+    list-style-type:none;
+    display: flex;
+    justify-content:flex-end;
+  }
+  .navbar_ul li a{
+    text-decoration: none;
+    color:white;
+    padding:0 15px;
+    font-weight:800;
+    text-transform:uppercase;
+  transition: all 0.3s ease-in-out;
+  }
+  .navbar_ul li a:hover{
+    color:antiquewhite ;
+  }
+  .banner_btn{
+    margin-top:25px;
+  }
+  .btn{
+    border-radius: 30px;
+    font-size:17px;
+    text-decoration:none;
+    font-weight:700;
+    border:none;
+    outline:none;
+    padding:20px 40px;
+    color:white;
+  }
+  .btn-smart{
+    background-color: rgb(255, 69, 79);
+  }
+  
+  /* Children Section  */
+  .autisminchild{
+
+    color:black;
+    /* border:2px solid black; */
+    /* background-color: white; */
+    padding:80px 0px;
+  }
+  .row{
+    display:flex;
+    color:black;
+    height:fit-content;
+    /* border:2px solid black; */
+  }
+  .col{
+    width:fit-content;
+    margin:0px 20px;
+    /* border:2px solid black; */
+  }
+  .col h3{
+    font-size:55px;
+  }
+  .col h1{
+    margin-top: 20px;;
+    font-size:80px;
+    line-height: 80px;
+    font-weight: 1000;
+  }
+  .col p{
+    margin-top: 20px;
+    font-size:25px;
+    font-weight:600;
+    margin-bottom:15px;
+  }
+  .autisminchild_img{
+    width:100%;
+    overflow: hidden;
+  }
+  .autisminchild_img img{
+    width:100%;
+  
+  }
+  .autisminchild_btn{
+    margin-top:15px;
+  }
+
+/* Adult section */
+.autismadult{
+    background:url("static/images/nathan-anderson-FHiJWoBodrs-unsplash.jpg");
+   
+}
+.adult_text h3{
+    font-size:55px;
+    text-align: center;
+    /* border:2px solid yellow; */
+  }
+.adult_text p{
+    margin-top: 20px;
+    font-size:25px;
+    font-weight:600;
+    margin-bottom:15px;
+  }
+  .adultbtn{
+      text-align: center;
+  }
+  .autismintod{
+      padding:80px 0px;
+  }
+  .autismintod_img img{
+    width:100%;  
+  }
+  .back{
+    width:100%;
+      height:600px; 
+      background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+    display:flex;
+    align-items:center;
+  }
+  /* therapy section  */
+  .therapies{
+      background-image:url("/static/images/anna-kolosyuk-4R6pg0Iq5IU-unsplash.jpg");
+  }
+  .therapy_text{
+      display:flex;
+      flex-wrap: wrap;
+  }
+  .therapy_text a{
+      text-decoration:none;
+      font-size:23px;
+      text-transform:uppercase;
+      color:black;
+      font-weight:900;
+  }
+  .size{
+      width:300px;
+      height:210px;
+      /* border:2px solid yellow; */
+      margin-top:20px;
+      margin-left:60px;
+      text-align: center;
+      display:flex;
+      align-items:center;
+      background-color:white;
+    transition: all 0.2s ease-out;
+    opacity: 0.4;
+  }
+  .size:hover{
+    transform: scale(1.10);
+    opacity:0.8;
+}
+  .heading{
+      font-size:55px;
+      text-align:center;
+  }
+  /* feedback form */
+  .feedback{
+      padding:80px 0px;
+  }
+  .feedback_text{
+      color:black;
+  }
+  .feedback h3{
+    font-size:55px;
+    text-align:center;
+  }
+  .feedback h1{
+    margin-top: 20px;;
+    font-size:80px;
+    line-height: 80px;
+    font-weight: 1000;
+  }
+  .feedback p{
+    margin-top: 20px;
+    font-size:25px;
+    font-weight:600;
+    margin-bottom:15px;
+  }
+  .feedback_btn{
+      margin-top:20px;
+      text-align:center;
+  }
+  .fed{
+      width:100%;
+      margin-top:20px;
+      height:50px;
+      font-size:20px;
+      color:black;
+     
+  }
+  #message{
+      width:100%;
+      margin-top:20px;
+      font-family: 'Montserrat', sans-serif;
+      font-size:20px;
+  }
+
+    </style>
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script>
+       $(document).ready(function() {
+         $('a[href^="#"]').on('click', function(e) {
+           e.preventDefault();
+           var target = this.hash;
+           var $target = $(target);
+           $('html, body').stop().animate({
+             'scrollTop': $target.offset().top
+           }, 900, 'swing', function() {
+             window.location.hash = target;
+           });
+         });
+       });
+     </script>
+</head>
+<body>
+    <!-- header -->
+    <div class="banner">
+        <div class='navbar'>
+            <div class='navbar_text'>
+                <div class='logo'><h1>AUTISM</h1></div>
+                  <ul class='navbar_ul'>
+                   <li><a href="#">Home</a></li>
+                   <li><a href="#">Autism</a></li>
+                   <li><a href="#autiinchild">Austism in Children</a></li>
+                   <li><a href="#autiinadult">Autism in Adults</a></li>
+                   <li><a href="#thera">Autism Therapies and Services</a></li>  
+                  </ul>
+                </div>
+           </div>
+        <div class='banner_content'>
+         <div class="container">
+           <div class='banner_text'>
+           <!-- <h3>Autism Detector</h3> -->
+             <h1>AUTISM DETECTOR</h1>
+             <p>
+             Autism is not a choice, acceptance is.
+             </p>
+             <br></br>
+             <div class='banner_btn'>
+                 <a href="/home" class="btn btn-smart">DETECT AUTISM</a>
+             </div>
+             <br>
+             <br>
+             <div class='banner_btn'>
+              <a href="/image" class="btn btn-smart">DETECT AUTISM USING IMAGE</a>
+          </div>
+           </div>
+         </div>
+        </div>
+        <!-- children section  -->
+        <div class='autisminchild' id="autiinchild">
+            <div class='container'>
+               <div class='row'>
+                   <div class='col'>
+                   <h3>Autism in Children</h3>
+                       <p>
+                        Autism can be controlled if detected at an early age.
+                        So don't take a chance, as a responsible parent take 
+                        this quiz if you any symptoms of autism in your child.
+                        This small step might save your child's future.
+                      </p>
+                      <br></br>
+                   <div class='autisminchild_btn'>
+                        <a href="https://www.healthychildren.org/English/health-issues/conditions/Autism/Pages/Early-Signs-of-Autism-Spectrum-Disorders.aspx" class='btn btn-smart'>READ MORE</a>
+                  </div>
+                   </div>
+                   <div class='col'>
+                       <div class='autisminchild_img'>
+                       <img src="static/images/caleb-woods-ecRuhwPIW7c-unsplash.jpg"></img>
+                       </div>
+                   </div>
+               </div>
+            </div>
+        </div>
+        <!-- adult section -->
+        <div class="autismadult back" id="autiinadult">
+            <div class="container">
+               <div class="adult_text">
+                <h3>Autism in Adults</h3>
+                 <p>
+                    Common signs of autism in adults include finding it hard to understand what others are thinking or feeling
+                    getting very anxious about social situations and so on. Autism can sometimes be different in women and men.
+                    For example, autistic women may be quieter, may hide their feelings and may appear to cope better with social 
+                    situations. Get yourself tested using this detector, and likewise take medical action wisely.
+                </p>
+                <br>
+                <br>
+                <div class="adultbtn">
+                    <a href="https://www.nhs.uk/conditions/autism/signs/adults/#:~:text=Main%20signs%20of%20autism&text=finding%20it%20hard%20to%20understand,in%20others%20without%20meaning%20to"class='btn btn-smart '>READ MORE</a>
+                </div> 
+               </div>
+            </div>
+        </div> 
+        <div class='autismintod' id="#autiintod">
+            <div class='container'>
+               <div class='row'>
+                   <div class='col'>
+                       <div class='autismintod_img'>
+                       <img src="static/images/leo-rivas-wtxcaDIdOCM-unsplash.jpg"></img>
+                       </div>
+                   </div>
+                   <div class='col'>
+                    <h3>Autism in Toddlers</h3>
+                        <p>
+                            Autism can be controlled if detected at an early age.
+                            So don't take a chance, as a responsible parent take 
+                            this quiz if you any symptoms of autism in your child.
+                            This small step might save your child's future.
+
+                       </p>
+                       <br></br>
+                    <div class='autisminchild_btn'>
+                         <a href="https://www.cdc.gov/ncbddd/autism/signs.html#:~:text=Autism%20spectrum%20disorder%20(ASD)%20is,%2C%20moving%2C%20or%20paying%20attention." class='btn btn-smart'>READ MORE</a>
+                   </div>
+                    </div>
+               </div>
+            </div>
+        </div>
+       
+        <div class="therapies back" id="thera">
+            <div class="box">
+                <div class="heading">Therapies and Treatments Of Autism</div>
+                <div class="therapy_text">
+                    <div class="cont1 size"><a href="https://www.nichd.nih.gov/health/topics/autism/conditioninfo/treatments/Pages/behavioral-management.aspx">Behavioral management therapy</a></div>
+                    <div class="cont2 size"><a href="https://www.nichd.nih.gov/health/topics/autism/conditioninfo/treatments/Pages/cognitive-behavior.aspx">Cognitive behavior therapy</a></div>
+                    <div class="cont3 size"><a href="https://www.nichd.nih.gov/health/topics/autism/conditioninfo/treatments/Pages/nutritional-therapy.aspx">Nutritional therapy</a></div>
+                    <div class="cont4 size"><a href="https://www.nichd.nih.gov/health/topics/autism/conditioninfo/treatments/Pages/educational-therapies.aspx">Educational and school-based therapies</a></div>
+                    <div class="cont5 size"><a href="https://www.nichd.nih.gov/health/topics/autism/conditioninfo/treatments/Pages/medication-treatment.aspx">Medication treatment</a></div>
+                    <div class="cont6 size"><a href="https://www.nichd.nih.gov/health/topics/autism/conditioninfo/treatments/Pages/social-skills.aspx">Social skills training</a></div>
+                    <div class="cont7 size"><a href="https://www.nichd.nih.gov/health/topics/autism/conditioninfo/treatments/Pages/speech-language.aspx">Speech-language therapy</a></div>
+                    <div class="cont8 size"><a href="https://www.nichd.nih.gov/health/topics/autism/conditioninfo/treatments/Pages/occupational-therapy.aspx">Occupational therapy</a></div>
+                    <div class="cont9 size"><a href="https://www.nichd.nih.gov/health/topics/autism/conditioninfo/treatments/Pages/parent-mediated.aspx">Parent-mediated therapy</a></div>
+                    <div class="cont10 size"><a href="https://www.nichd.nih.gov/health/topics/autism/conditioninfo/treatments/Pages/physical-therapy.aspx">Physical therapy</a></div>
+                
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class='feedback'>
+            <div class='container'>
+                   <div class='feedback_text'>
+                   <h3>Feedback From</h3>
+                    
+                      <input type="text" name="name" class="fed" placeholder="Enter Name" ><br>
+                      <input type="email" name="email" class="fed" placeholder="Enter Email"><br>
+                      <textarea name="" id="message"  cols="30" rows="10" placeholder="Your Message"></textarea>
+                      <br></br>
+                   <div class='feedback_btn'>
+                        <a href="" class='btn btn-smart'>SUBMIT FORM</a>
+                  </div>
+                   </div>
+               </div>
+            </div>
+        </div>
+       
+      
+</body>
+</html>

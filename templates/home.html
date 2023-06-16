@@ -1,0 +1,211 @@
+
+<html>
+    <head>
+        <title>Autism Detection Page</title>
+        <!-- <link rel= "stylesheet" type= "text/css" href= "static/styles/styles2.css"> -->
+       <style>
+
+label{
+    font-weight: 750;
+    margin-bottom: 10px;
+    display: inline-block;
+    text-align: center;
+}
+input{
+    margin-top: 10px;
+}
+body{
+    background-image: url("/static/images/todd-kent-PsLrgT55DeM-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: right;
+    font-family: sans-serif;
+    
+}
+h1{
+    /* text-decoration: underline; */
+    color: white;
+    text-align: center;
+}
+button{
+    height: 80px;
+    width: 150px;
+    font-size: 20px;
+    background-color: rgb(96, 96, 190);
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 45vw;
+    margin-right: 45vw;
+    /* display: flex;
+    flex-flow: row nowrap;
+    justify-content: center; */
+    align-items: center;
+    padding: 10px;
+    transition: all 0.2s ease-out;
+}
+button:hover{
+    transform: scale(1.1);
+}
+input{
+    opacity: 1;
+    z-index: 2;
+}
+
+/* class */
+.segments{
+    border: 3px solid black;
+    margin: 30px;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 20px;
+    background-color: black;
+    color: white;
+    /* text-align: justify; */
+    text-transform: capitalize;
+    font-size: 17px;
+    transition: all 0.2s ease-out;
+    opacity: 0.8;
+}
+.segments:hover{
+    transform: scale(1.05);
+}
+</style>
+    </head>
+
+    <body>
+        <div class="segments">
+            <h1 id="main-heading">
+                Autism Detection Page For Adults
+            </h1>
+        </div>
+
+        <form action="{{url_for('qprediction')}}" method="POST">
+            <!-- age -->
+            <div class="segments">
+                <label for="age">Enter Age</label><br>
+                <input type="number" id="age" required>
+            </div>
+            <!-- gender  -->
+            <div class="segments">
+                <label for="radio">Gender</label><br>
+                <input type="radio" name="gender" value="male" checked>Male <br>
+                <input type="radio" name="gender" value="female">Female <br>
+                <input type="radio" name="gender" value="other">Other <br>
+            </div>
+            <!-- ethnicity  -->
+            <div class="segments">
+                <label for="radio">Ethnicity</label><br>
+                <input type="radio" name="ethnicity" value="american-indian-or-alaska-native">American Indian Or Alaska Native <br>
+                <input type="radio" name="ethnicity" value="asian" checked>Asian <br>
+                <input type="radio" name="ethnicity" value="black-or-african-american">Black Of African American <br>
+                <input type="radio" name="ethnicity" value="hispanic-latino">Hispanic Or Latino <br>
+                <input type="radio" name="ethnicity" value="native-hawaiian-or-other-pacific-islander">Native Hawaiian Or Other Pacific Islander <br>
+                <input type="radio" name="ethnicity" value="white">White <br>
+            </div>
+            <!-- born with jaundice  -->
+            <div class="segments">
+                <label for="radio">Born With Jaundice?</label><br>
+                <input type="radio" name="born-with-jaundice" value="yes">Yes <br>
+                <input type="radio" name="born-with-jaundice" value="no" checked>No <br>
+                <input type="radio" name="born-with-jaundice" value="no">Cannot Confirm <br>
+            </div>
+            <!-- family member with PDD  -->
+            <div class="segments">
+                <label for="radio">Family Member With PDD?</label><br>
+                <input type="radio" name="family-member-with-pdd" value="yes">Yes <br>
+                <input type="radio" name="family-member-with-pdd" value="no" checked>No <br>
+                <input type="radio" name="family-member-with-pdd" value="no">Cannot Confirm <br>
+            </div>
+            <!-- who is completing test  -->
+            <div class="segments">
+                <label for="radio">Who is Completing the test</label><br>
+                <input type="radio" name="who-is-completing-the-test" value="parent">Parent <br>
+                <input type="radio" name="who-is-completing-the-test" value="self" checked>self <br>
+                <input type="radio" name="who-is-completing-the-test" value="caregiver">caregiver <br>
+                <input type="radio" name="who-is-completing-the-test" value="medical-staff">medical staff<br>
+                <input type="radio" name="who-is-completing-the-test" value="clinician">clinician <br>
+            </div>
+            <!-- list of countries  -->
+            <!-- used screening app before  -->
+            <div class="segments">
+                <label for="radio">Used screening app before?</label><br>
+                <input type="radio" name="used-screeing-app-before" value="yes">Yes <br>
+                <input type="radio" name="used-screeing-app-before" value="no" checked>No <br>
+            </div>
+            <!-- screening method type  -->
+
+
+            <!-- q1  -->
+            <div class="segments">
+                <label for="radio">Q1: I often notice small sounds when others do not</label><br>
+                <input type="radio" name="q1" value="1">Yes <br>
+                <input type="radio" name="q1" value="0" checked>No <br>
+                <input type="radio" name="q1" value="0">cannot confirm <br>
+            </div>
+            <!-- q2  -->
+            <div class="segments">
+                <label for="radio">Q2: I usually concentrate more on the whole picture rather than the small details</label><br>
+                <input type="radio" name="q2" value="1">Yes <br>
+                <input type="radio" name="q2" value="0" checked>No <br>
+                <input type="radio" name="q2" value="0">cannot confirm <br>
+            </div>
+            <!-- q3  -->
+            <div class="segments">
+                <label for="radio">Q3: I find it easy to do more than one at once</label><br>
+                <input type="radio" name="q3" value="1">Yes <br>
+                <input type="radio" name="q3" value="0" checked>No <br>
+                <input type="radio" name="q3" value="0">cannot confirm <br>
+            </div><!-- q4  -->
+            <div class="segments">
+                <label for="radio">Q4: If there is an interruption, i can switch back to what i was doing very quickly</label><br>
+                <input type="radio" name="q4" value="1">Yes <br>
+                <input type="radio" name="q4" value="0" checked>No <br>
+                <input type="radio" name="q4" value="0">cannot confirm <br>
+            </div><!-- q5  -->
+            <div class="segments">
+                <label for="radio">Q5: I find it easy to read between the lines when someone is talking to me</label><br>
+                <input type="radio" name="q5" value="1">Yes <br>
+                <input type="radio" name="q5" value="0" checked>No <br>
+                <input type="radio" name="q5" value="0">cannot confirm <br>
+            </div><!-- q6  -->
+            <div class="segments">
+                <label for="radio">Q6: I know how to tell if someone listening to me is getting bored</label><br>
+                <input type="radio" name="q6" value="1">Yes <br>
+                <input type="radio" name="q6" value="0" checked>No <br>
+                <input type="radio" name="q6" value="0">cannot confirm <br>
+            </div><!-- q7  -->
+            <div class="segments">
+                <label for="radio">Q7: When i am reading a story, i find it difficult to work out the character's intentions</label><br>
+                <input type="radio" name="q7" value="1">Yes <br>
+                <input type="radio" name="q7" value="0" checked>No <br>
+                <input type="radio" name="q7" value="0">cannot confirm <br>
+            </div><!-- q8  -->
+            <div class="segments">
+                <label for="radio">Q8: I like to collect information about categories of things</label><br>
+                <input type="radio" name="q8" value="1">Yes <br>
+                <input type="radio" name="q8" value="0" checked>No <br>
+                <input type="radio" name="q8" value="0">cannot confirm <br>
+            </div><!-- q9  -->
+            <div class="segments">
+                <label for="radio">Q9: I find it easy to work out what someone is thinking or feeling just by looking at their face</label><br>
+                <input type="radio" name="q9" value="1">Yes <br>
+                <input type="radio" name="q9" value="0" checked>No <br>
+                <input type="radio" name="q9" value="0">cannot confirm <br>
+            </div>
+            <!-- q10  -->
+            <div class="segments">
+                <label for="radio">Q10: I find it difficult to work out people's intention</label><br>
+                <input type="radio" name="q10" value="1">Yes <br>
+                <input type="radio" name="q10" value="0" checked>No <br>
+                <input type="radio" name="q10" value="0">cannot confirm <br>
+            </div>
+                <button type="submit" value="predict/questionnaire">Submit Response</button>
+            
+        </form>
+        
+    </body>
+</html>
